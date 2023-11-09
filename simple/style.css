@@ -1,0 +1,185 @@
+body {
+    margin: 0;
+    ;
+}
+
+a {
+    Padding: 4rem;
+    font-size: 32px;
+}
+
+.grid-container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 1rem;
+}
+
+.temp {
+    grid-template-areas: 
+    " header header header"
+    " header header header"
+    " nav nav nav "
+    " main main aside "
+    " main main aside "
+    " main main aside "
+    " main main aside "
+    " main main aside "
+    " main main aside "
+    " footer footer footer "
+    " footer footer footer "
+    ;
+}
+
+header {
+    background-color: red;
+}
+
+.headerPosStatic{
+    grid-column: 1 / 4;
+    grid-row: 1 / 3;
+}
+
+.headerPosFlow{
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 2;
+}
+
+.headerPosTemp {
+    grid-area: header;
+}
+
+
+nav {
+    background-color: blue;
+}
+
+.navPosStatic{
+    grid-column: 1 / 4;
+    grid-row: 3 / 4;
+}
+.navPosFlow{
+    grid-column: span 3;
+    grid-row: span 1;
+}
+
+.navPosTemp {
+    grid-area: nav;
+}
+
+main {
+    background-color: yellow;
+}
+
+.mainPosStatic {
+    grid-column: 1 / 3;
+    grid-row: 4 / 10;
+}
+.mainPosFlow {
+    grid-column: span 2;
+    grid-row: span 5;
+}
+
+.mainPosTemp {
+    grid-area: main;
+}
+
+aside {
+    background-color: green;
+}
+
+.asidePosStatic {
+    grid-column: 3 / 4;
+    grid-row: 4 / 10;
+}
+.asidePosFlow {
+    grid-column: span 1;
+    grid-row: span 5;
+}
+
+.asidePosTemp {
+    grid-area: aside;
+}
+
+footer {
+    background-color: purple;
+}
+
+.footerPosStatic {
+    grid-column: 1 / 4;
+    grid-row: 10 / 12;
+}
+.footerPosFlow {
+    grid-column: span 3;
+    grid-row: span 2;
+}
+
+.footerPosTemp {
+    grid-area: footer;
+}
+
+@media only screen and (max-width: 1000px) {
+    .headerPosStatic{
+        grid-column: 1 / 4;
+        grid-row: 1 / 3;
+    }
+    .navPosStatic{
+        grid-column: 1 / 4;
+    }
+    .mainPosStatic {
+        grid-column: 1 / 4;
+        grid-row: 4 / 10;
+    }
+    .asidePosStatic {
+        grid-column: 1 / 4;
+        grid-row: 10 / 16;
+    }
+    .footerPosStatic {
+        grid-column: 1 / 4;
+        grid-row: 16 / 18;
+    }
+
+    .headerPosFlow{
+        grid-column: 1 / span 3;
+        grid-row: 1 / span 2;
+    }
+    .navPosFlow{
+        grid-column: span 3;
+        grid-row: span 1;
+    }    
+    .mainPosFlow {
+        grid-column: span 3;
+        grid-row: span 5;
+    }    
+    .asidePosFlow {
+        grid-column: span 3;
+        grid-row: span 5;
+    }
+    .footerPosFlow {
+        grid-column: span 3;
+        grid-row: span 2;
+    }
+    
+    .temp {
+        grid-template-areas: 
+        " header header header"
+        " header header header"
+        " nav nav nav "
+        " main main main "
+        " main main main "
+        " main main main "
+        " main main main "
+        " main main main "
+        " main main main "
+        " aside aside aside "
+        " aside aside aside "
+        " aside aside aside "
+        " aside aside aside "
+        " aside aside aside "
+        " aside aside aside "
+        " footer footer footer "
+        " footer footer footer "
+        ;
+    }
+
+}

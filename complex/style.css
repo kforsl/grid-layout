@@ -1,0 +1,232 @@
+body {
+    margin: 0;
+}
+
+a {
+    Padding: 4rem;
+    font-size: 32px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+}
+
+.temp {
+    grid-template-areas:
+        " nav nav nav nav nav nav nav nav nav nav nav nav"
+        " header header header header header header header header header header header header"
+        " main main main main main main main main main aside aside aside"
+        " a a a a a a b b b b b b "
+        " c c c c c c d d d d d d "
+        " figure figure figure figure figure figure figure figure figure figure figure figure "
+        " footer footer footer footer footer footer footer footer footer footer footer footer"
+    ;
+}
+
+nav {
+    height: 10rem;
+    background-color: blue;
+}
+
+.navTemp {
+    grid-area: nav;
+}
+
+.navFlow {
+    grid-column: span 12;
+}
+
+header {
+    height: 15rem;
+    background-color: red;
+}
+
+.headTemp {
+    grid-area: header;
+}
+
+.headFlow {
+    grid-column: span 12;
+}
+
+main {
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainTemp {
+    grid-area: main;
+}
+
+.mainFlow {
+    grid-column: span 8;
+}
+
+article {
+    margin: 10px;
+    height: 400px;
+    background-color: white;
+}
+
+
+aside {
+    background-color: green;
+}
+
+.asideTemp {
+    grid-area: aside;
+}
+
+.asideFlow {
+    grid-column: span 4;
+}
+
+section {
+    height: 15rem;
+    background-color: rgb(0, 128, 107);
+}
+
+.a {
+    grid-area: a;
+}
+
+.b {
+    grid-area: b;
+}
+
+.c {
+    grid-area: c;
+}
+
+.d {
+    grid-area: d;
+}
+
+
+.spanA {
+    grid-column: span 6;
+}
+
+.spanB {
+    grid-column: span 6;
+}
+
+.spanC {
+    grid-column: span 6;
+}
+
+.spanD {
+    grid-column: span 6;
+}
+
+figure.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+}
+
+figure {
+    background-color: rgb(216, 216, 216);
+}
+
+img {
+    height: 20rem;
+    background-color: aqua;
+    grid-column: span 1;
+}
+
+.figureTemp{
+    grid-area: figure;
+}
+
+.figureFlow{
+    grid-column: span 12;
+}
+
+
+footer {
+    height: 15rem;
+    background-color: purple;
+}
+
+.footTemp {
+    grid-area: footer;
+    grid-template-rows: auto / auto;
+}
+
+.footFlow {
+    grid-column: span 12;
+}
+
+@media only screen and (max-width: 1000px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+
+    .navFlow {
+        grid-column: span 4;
+    }
+
+    .headFlow {
+        grid-column: span 4;
+    }
+
+    .mainFlow {
+        grid-column: span 4;
+    }
+
+    .asideFlow {
+        grid-column: span 4;
+    }
+
+    .spanA {
+        grid-column: span 4;
+    }
+
+    .spanB {
+        grid-column: span 4;
+    }
+
+    .spanC {
+        grid-column: span 4;
+    }
+
+    .spanD {
+        grid-column: span 4;
+    }
+
+    figure.grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+
+    .figureFlow{
+        grid-column: span 4;
+    }
+
+    .footFlow {
+        grid-column: span 4;
+    }
+
+    .temp {
+        grid-template-areas:
+            " nav nav nav nav"
+            " header header header header"
+            " main main main main"
+            " aside aside aside aside"
+            " a a a a"
+            " b b b b"
+            " c c c c"
+            " d d d d"
+            " figure figure figure figure"
+            " footer footer footer footer"
+        ;
+    }
+}
